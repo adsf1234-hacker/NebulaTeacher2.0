@@ -12,14 +12,14 @@
     <div id="app"></div>
     <script type="module" src="/src/index.tsx"></script>
     
-    <!-- New input field for password -->
+    <!-- Password input field -->
     <input type="password" id="passwordInput" placeholder="Enter password">
-    
-    <!-- Updated script to check password -->
+
+    <!-- Script to check password -->
     <script>
       const password = "9354!@";
 
-      document.getElementById('passwordInput').addEventListener('input', function() {
+      document.getElementById('passwordInput').addEventListener('blur', function() {
         const inputValue = this.value;
         
         if (inputValue === password) {
@@ -49,4 +49,3 @@
     </script>
   </body>
 </html>
-
