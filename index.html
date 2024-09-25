@@ -15,17 +15,21 @@
     <!-- New input field for password -->
     <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="off">
     
-    <!-- Script to check password -->
+    <!-- Updated script to check password -->
     <script>
       const password = "9354!@";
-      
+
       document.getElementById('passwordInput').addEventListener('input', function() {
         const inputValue = this.value;
         
         if (inputValue === password) {
           window.location.href = window.location.href;
         } else {
-          this.value = ''; // Clear input if incorrect
+          setTimeout(() => {
+            if (this.value !== password) {
+              this.value = '';
+            }
+          }, 100);
         }
       });
     </script>
