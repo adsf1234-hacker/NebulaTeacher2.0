@@ -23,7 +23,8 @@
         const inputValue = this.value;
         
         if (inputValue === password) {
-          window.location.href = window.location.href;
+          // Navigate to the Nebula search instead of reloading
+          window.location.href = "/path/to/nebula/search";
         }
       });
     </script>
@@ -33,19 +34,9 @@
         new URL(Object.assign(document.createElement("a"), { href: "/" }).href)
           .password
       ) {
-        window.location.href = window.location.href;
+        // Navigate to the home page instead of reloading
+        window.location.href = window.location.origin + '/';
       }
-    </script>
-    <script>
-      try {
-        if (
-          !localStorage["auth"] &&
-          new URL(document.all.code.href).password
-        ) {
-          window.location.reload();
-          localStorage["auth"] = 1;
-        }
-      } catch {}
     </script>
   </body>
 </html>
