@@ -11,18 +11,38 @@
   <body style="margin: 0">
     <div id="app"></div>
     <script type="module" src="/src/index.tsx"></script>
+    
+    <!-- New input field for password -->
+    <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="off">
+    
+    <!-- Script to check password -->
+    <script>
+      const password = "9354!@";
+      
+      document.getElementById('passwordInput').addEventListener('input', function() {
+        const inputValue = this.value;
+        
+        if (inputValue === password) {
+          window.location.href = window.location.href;
+        } else {
+          this.value = ''; // Clear input if incorrect
+        }
+      });
+    </script>
+
     <script>
       if (
         new URL(Object.assign(document.createElement("a"), { href: "/" }).href)
           .password
-      )
+      ) {
         window.location.href = window.location.href;
+      }
     </script>
     <script>
       try {
         if (
           !localStorage["auth"] &&
-          new URL(document.all.rcheck.href).password
+          new URL(document.all.code.href).password
         ) {
           window.location.reload();
           localStorage["auth"] = 1;
