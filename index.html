@@ -13,7 +13,7 @@
     <script type="module" src="/src/index.tsx"></script>
     
     <!-- New input field for password -->
-    <input type="password" id="passwordInput" placeholder="Enter password" autocomplete="off">
+    <input type="password" id="passwordInput" placeholder="Enter password">
     
     <!-- Updated script to check password -->
     <script>
@@ -24,12 +24,6 @@
         
         if (inputValue === password) {
           window.location.href = window.location.href;
-        } else {
-          setTimeout(() => {
-            if (this.value !== password) {
-              this.value = '';
-            }
-          }, 100);
         }
       });
     </script>
@@ -55,3 +49,4 @@
     </script>
   </body>
 </html>
+
